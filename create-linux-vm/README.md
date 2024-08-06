@@ -27,7 +27,7 @@
 
 * Click **Next**.
 
-    ![specify-name-and-location](./images/virtWiz02.png)
+![specify-name-and-location](./images/virtWiz02.png)
 
 ### 3. Specify the Generation
 > **Generation 1 and Generation 2** virtual machines are two different types of virtual machines that can be created in Hyper-V. The main difference between the two is the **firmware** used to boot the virtual machine.
@@ -41,12 +41,78 @@
 
 * click **Next**.
 
-    ![gen1-and-gen2](./images/VirtWiz03.PNG)
+![gen1-and-gen2](./images/VirtWiz03.PNG)
 
 ### 4. Assign Memory
+* Specify the amount of Memory to allocate to the virtual machine (*e.g., 4096 MB or 2048MB*).
+
+* Uncheck the "**Use Dynamic Memory for this virtual machine**".
+
+* Click **Next**.
+
+![assign-memory](./images/VirtWiz04.PNG)
+
+> **NOTE:** If you want to have a virtual machine with GUI(*e.g. Desktop Environment*) allocate at least **4096MB** of RAM but if You are planning on setting up  linux as server **1024MB** or **2048MB** would be sufficient.
 
 ### 5. Configure Networking
+
+* Select the Network to connect the virtual machine to:
+
+    * **Not Connected**: No network connection.
+
+    * **Default Switch**: Connect to an internal network using a virtual switch.
+
+    * **Other Networks(if you've created [before](../enable-hyper-v/README.md#5-create-an-external-virtual-switch))**
+
+* Click **Next**.
+
+![configure-networking](./images/VirtWiz05.PNG)
+
 ### 6. Create a Virtual Hard Disk
+
+* Choose to Create a virtual hard disk or Use an existing virtual hard disk.
+
+* Specify the Name, Location, and Size of the virtual hard disk (*e.g., 30 GB*).
+
+* Click **Next**.
+
+![virtual-hard-disk](./images/VirtWiz06.PNG)
+> **NOTE:** Give your virtual machine at least **20GB** of space.
+
 ### 7. Select Linux Distro iso file
+
+* check **"Install an operating system from a bootable CD/DVD-ROM"**
+
+* check **"Image file (.iso)"** and then give it your iso file.
+
+* click **Next**.
+
+![installation-option](./images/VirtWiz07.PNG)
+
 ### 8. Complete the New Virtual Machine Wizard
+
+* check summary and if everything feels Ok, click finish.
+
 ### 9. Configure Created Virtual Machine For Linux
+
+* right click on the newly created virtual machine and then click on **Settings..."**
+
+    ![virt-settings](./images/VirtSetting01.PNG)
+
+* Navigate to **Security from Hardware section** and make sure secure boot is **disabled**.
+
+    ![secure-boot](./images/VirtSetting02.PNG)
+
+* Navigate to **Processor from Hardware section** and set the **"Number of virtual processors"** to at least **2**.
+
+    ![processor](./images/VirtSetting03.PNG)
+
+> **NOTE:** If You're using this virtual machines as a server, **1** processor would be enough.
+
+* Navigate to **Integration Services from Management section** and check all the services.
+
+    ![integration-services](./images/VirtSetting04.PNG)
+
+*  Navigate to **Checkpoints from Management section** and disable checkpoints.
+
+    ![checkpoints](./images/VirtSetting05.PNG)
