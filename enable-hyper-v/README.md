@@ -9,7 +9,7 @@
 2. [Restart your computer](#2-restart-your-computer)
 3. [Launch Hyper-v Manager](#3-launch-hyper-v-manager)
 4. [Enable Enhanced Session Mode](#4-enable-enhance-session-mode)
-5. [Create An External Virtual Switch](#5-create-a-virtual-switch)
+5. [Create An External Virtual Switch](#5-create-an-external-virtual-switch)
 
 ## 1. Enable Hyper-v
 * Press the **Windows key + S** to open the Search bar.
