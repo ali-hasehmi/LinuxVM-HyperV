@@ -9,7 +9,7 @@
 2. [Restart your computer](#2-restart-your-computer)
 3. [Launch Hyper-v Manager](#3-launch-hyper-v-manager)
 4. [Enable Enhanced Session Mode](#4-enable-enhance-session-mode)
-5. [Create a Virtual Switch](#5-create-a-virtual-switch)
+5. [Create An External Virtual Switch](#5-create-a-virtual-switch)
 
 ## 1. Enable Hyper-v
 * Press the **Windows key + S** to open the Search bar.
@@ -51,4 +51,19 @@
     ![enhanced-session-mode-user](./images/enhancedSessionM.PNG)
 
 * click "**ok**".
-## 5. Create a Virtual Switch
+
+## 5. Create An External Virtual Switch
+
+ > By default, Hyper-V creates a virtual switch with a NAT configuration inside your host and calls it the **Default Switch**. The problem with this configuration is that other devices on your local network cannot connect to your virtual machine directly. Therefore, we create an external virtual switch (also known as a bridged network or **External Switch**) to make the virtual machine         accessible on the LAN. see [here](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch) for more information.
+
+ * Open the **Virtual Switch Manager** from Actions Menu on the right.
+ 
+ * Select **External** as swtich type and then click on **Create Virtual Switch**
+
+ * you can give the switch any arbitrary name you prefer 
+ 
+ * Choose the physical network interface you want to associate with the virtual switch.
+
+    ![virtual-switches](./images/virtualSwitches.PNG)
+
+* click **"ok"**.
