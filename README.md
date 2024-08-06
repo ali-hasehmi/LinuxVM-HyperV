@@ -8,7 +8,7 @@ Well, Hyper-V is already built into Windows, so you need no other software to ma
 
 ## Table of content
 
-* Enable Hyper-v
+* [Enable Hyper-v](./enable-hyper-v/README.md)
 
 * Create GNU/Linux virtual machine
 
