@@ -33,10 +33,22 @@
 
 * Type "**Hyper-V Manager**" and select the result.
 
-    ![hyperv manager](./images/hyper-v-manager.png)
-    
+    ![search hyperv manager](./images/hyper-v-manager.png)
+
 * The Hyper-V Manager window will open, where you can create and manage virtual machines.
 
-## 4. Enable Enhance Session Mode
+    ![hperv manager](./images/Hyper-VManager.PNG)
 
+## 4. Enable Enhance Session Mode
+* Open Hyper-V settings from the Actions menu on the right.
+
+* In the Server section, navigate to the Enhanced Session Mode Policy option and make sure it is enabled by checking the corresponding box.
+
+    ![enhanced-session-mode-server](./images/enhancedSessionMP.PNG)
+
+* In the User section, locate the Enhanced Session Mode Policy option and enable it by checking the corresponding box.
+
+    ![enhanced-session-mode-user](./images/enhancedSessionM.PNG)
+
+* click "**ok**".
 ## 5. Create a Virtual Switch
