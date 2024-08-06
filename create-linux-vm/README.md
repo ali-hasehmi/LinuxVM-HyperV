@@ -11,6 +11,7 @@
 8. [Complete the New Virtual Machine Wizard](#8-complete-the-new-virtual-machine-wizard)
 9. [Configure Created Virtual Machine For Linux](#9-configure-created-virtual-machine-for-linux)
 
+10. [Install Linux](#10-install-linux)
 ### 1. Create a New Virtual Machine
 
 * In the Hyper-V Manager window, click on **New** in the Actions panel on the right.
@@ -116,3 +117,10 @@
 *  Navigate to **Checkpoints from Management section** and disable checkpoints.
 
     ![checkpoints](./images/VirtSetting05.PNG)
+
+
+## 10. Install Linux
+
+* Right click on Your virtual machine and click on **"Connect..."**
+
+* Hopefully You will be able to boot from iso file provided before and begin the installation.
