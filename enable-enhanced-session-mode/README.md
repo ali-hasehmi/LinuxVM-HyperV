@@ -20,10 +20,26 @@ Some of the benefits of Enhanced Session Mode include:
 
 ## How to make it work in GNU/Linux?
 
-### Ubuntu
+### Ubuntu 24.04
 
 ```bash
 
-sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install.sh)"
+sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install24_04.sh)"
+
+```
+
+### Ubuntu 22.04
+
+```bash
+
+sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install22_04.sh)"
+
+```
+
+### Ubuntu 20.04
+
+```bash
+
+sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install20_04.sh)"
 
 ```
