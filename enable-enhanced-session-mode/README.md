@@ -23,5 +23,7 @@ Some of the benefits of Enhanced Session Mode include:
 ### Ubuntu
 
 ```bash
-sudo bash -c "$(curl -sSL https://raw,githubusercontent.com/username/repository/branch/script.sh)"
+
+sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install.sh)"
+
 ```

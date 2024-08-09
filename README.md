@@ -12,7 +12,7 @@ Well, Hyper-V is already built into Windows, so you need no other software to ma
 
 * [Create GNU/Linux virtual machine](./create-linux-vm/README.md)
 
-* Enable Enhanced Session Mode
+* [Enable Enhanced Session Mode](./enable-enhanced-session-mode/README.md)
     - Ubuntu
     - Arch
 * Enable Integration Services
