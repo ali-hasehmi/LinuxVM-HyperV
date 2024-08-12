@@ -19,17 +19,23 @@ function askForReboot() {
 
 # function to build pualseaudio-xrdp module
 function buildPulseAudioXRDP() {
+    REPO_URL="https://github.com/neutrinolabs/pulseaudio-module-xrdp.git"
+    REPO_DIR="pulseaudio-module-xrdp"
+    # Change Directory to tmp
+    cd /tmp 
+    if [ -d $REPO_DIR]; then
+        # Repository exists just update
+        cd ${REPO_DIR} && git pull
+    else
+        # Clone the Repository
+        git clone --recursive  ${REPO_URL}
+        # Change to Project Directory
+        cd ${REPO_DIR}
+    fi
     # Dependencies
     DEPEND="build-essential dpkg-dev libpulse-dev git autoconf libtool"
     # Install Dependecies
     apt install ${DEPEND}
-    # Change Directory 
-    cd /tmp
-    # Cloning the project
-    git clone --recursive  https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
-    # Change to Project Directory
-    cd pulseaudio-module-xrdp
-
     scripts/install_pulseaudio_sources_apt_wrapper.sh
     ./bootstrap && ./configure PULSE_DIR=~/pulseaudio.src
     make
