@@ -17,6 +17,24 @@ function askForReboot() {
 
 }
 
+# function to build pualseaudio-xrdp module
+function buildPulseAudioXRDP() {
+    # Dependencies
+    DEPEND="build-essential dpkg-dev libpulse-dev git autoconf libtool"
+    # Install Dependecies
+    apt install git
+    # Change Directory 
+    cd /tmp
+    # Cloning the project
+    git clone --recursive https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
+    # Change to Project Directory
+    cd pulseaudio-module-xrdp
+
+    scripts/install_pulseaudio_sources_apt_wrapper.sh
+    ./bootstrap && ./configure PULSE_DIR=~/pulseaudio.src
+    make
+    make install
+}
 
 # exit script on error 
 set -e
@@ -132,6 +150,7 @@ ResultInactive=no
 ResultActive=yes
 EOF
 
+buildPulseAudioXRDP
 
 # reconfigure the service
 systemctl daemon-reload
