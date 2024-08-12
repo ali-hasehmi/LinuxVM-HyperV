@@ -20,7 +20,7 @@ function askForReboot() {
 # function to build pualseaudio-xrdp module
 function buildPulseAudioXRDP() {
     # Dependencies
-    DEPEND="build-essential dpkg-dev libpulse-dev git autoconf libtool"
+    DEPEND="build-essential dpkg-dev libpulse-dev git autoconf libtool autoreconf make"
     # Install Dependecies
     apt install git
     # Change Directory 
@@ -150,6 +150,7 @@ ResultInactive=no
 ResultActive=yes
 EOF
 
+# installing pulseaudio module (ubuntu 22.04 uses pulseaudio)
 buildPulseAudioXRDP
 
 # reconfigure the service
