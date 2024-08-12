@@ -20,7 +20,7 @@ function askForReboot() {
 # function to build pualseaudio-xrdp module
 function buildPulseAudioXRDP() {
     # Dependencies
-    DEPEND="build-essential dpkg-dev libpulse-dev git autoconf libtool autoreconf make"
+    DEPEND="build-essential dpkg-dev libpulse-dev git autoconf libtool"
     # Install Dependecies
     apt install ${DEPEND}
     # Change Directory 
