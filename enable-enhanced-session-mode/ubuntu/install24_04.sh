@@ -12,7 +12,8 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Make sure system is in good shape
-apt update && apt upgrade -y
+apt update
+apt upgrade -y
 apt autoremove
 
 # Check if reboot is needed
