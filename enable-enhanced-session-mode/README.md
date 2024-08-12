@@ -20,6 +20,8 @@ Some of the benefits of Enhanced Session Mode include:
 
 ## How to make it work in GNU/Linux?
 
+> **IMPORTANT NOTE:** Make sure the auto-login **is disabled**.
+
 <details>
 <summary> Ubuntu (Gnome)</summary>
 <br>
