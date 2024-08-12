@@ -21,7 +21,7 @@ Some of the benefits of Enhanced Session Mode include:
 ## How to make it work in GNU/Linux?
 
 <details>
-<summary>Ubuntu (Gnome)</summary>
+<summary> Ubuntu (Gnome)</summary>
 
 <h3> 24.04 </h3>
 <pre><code>
@@ -40,6 +40,6 @@ sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-
 </details>
 
 <details>
-<summary> Manjaro (KDE)</summary>
+<summary> Manjaro (KDE) </summary>
 
 </details>

@@ -32,7 +32,7 @@ apt install -y linux-tools-virtual
 apt install -y linux-cloud-tools-virtual
 
 # installing xrdp and xorgxrdp for support of rdp
-# installing pipewire-xrdp for support for redirecting audio
+# installing pipewire-xrdp for support for redirecting audio (ubuntu 24.04 uses pipewire )
 apt install -y xrdp xorgxrp pipewire-module-xrdp libpipewire-0.3-modules-xrdp
 
 
@@ -64,7 +64,7 @@ chmod a+x /etc/profile.d/xrdp-setup.sh
 fi
 
 
-# Make everyone can connect
+# Make everyone can create a xserver
 sudo tee /etc/X11/Xwrapper.config > /dev/null << EOL
 # Xwrapper.config (Debian X Window System server wrapper configuration file)
 #
