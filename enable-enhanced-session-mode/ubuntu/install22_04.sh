@@ -26,7 +26,7 @@ function buildPulseAudioXRDP() {
     # Change Directory 
     cd /tmp
     # Cloning the project
-    git clone --recursive https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
+    git clone --recursive --force https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
     # Change to Project Directory
     cd pulseaudio-module-xrdp
 
