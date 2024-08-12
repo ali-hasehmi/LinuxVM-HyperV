@@ -22,7 +22,8 @@ Some of the benefits of Enhanced Session Mode include:
 
 <details>
 <summary> Ubuntu (Gnome)</summary>
-
+<br>
+<blockquote><b>NOTE:</b> Make sure that you have <b>curl</b> installed.</blockquote>
 <h3> 24.04 </h3>
 <pre><code>
 sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install24_04.sh)" 
