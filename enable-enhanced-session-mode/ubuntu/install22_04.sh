@@ -23,7 +23,7 @@ function buildPulseAudioXRDP() {
     REPO_DIR="pulseaudio-module-xrdp"
     # Change Directory to tmp
     cd /tmp 
-    if [ -d $REPO_DIR]; then
+    if [ -d $REPO_DIR ]; then
         # Repository exists just update
         cd ${REPO_DIR} && git pull
     else
