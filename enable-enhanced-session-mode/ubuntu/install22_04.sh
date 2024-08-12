@@ -22,7 +22,7 @@ function buildPulseAudioXRDP() {
     # Dependencies
     DEPEND="build-essential dpkg-dev libpulse-dev git autoconf libtool autoreconf make"
     # Install Dependecies
-    apt install git
+    apt install ${DEPEND}
     # Change Directory 
     cd /tmp
     # Cloning the project
