@@ -2,6 +2,9 @@
 
 # This is a rewritten version of github.com/Hinara/linux-vm-tools/master/ubuntu/24.04/install.sh
 
+# exit script on error 
+set -e
+
 # Check if script run as root
 if [ "$(id -u)" -ne 0 ]; then
     echo 'This script must be run with root privileges' >&2
