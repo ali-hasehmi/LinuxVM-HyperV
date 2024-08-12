@@ -2,6 +2,21 @@
 
 # This is a rewritten version of github.com/Hinara/linux-vm-tools/master/ubuntu/24.04/install.sh
 
+# Function to handle reboot 
+function askForReboot() {
+
+  read -p "Reboot now? [Y,n] " -n 1 -r
+
+  echo    # (optional) move to a new line
+
+  if [[ $REPLY =~ ^[Yy]$ || -z $REPLY ]]; then
+
+    reboot
+
+  fi
+
+}
+
 # exit script on error 
 set -e
 
@@ -24,6 +39,7 @@ apt autoremove
 if [ -f /var/run/reboot-required ]; then
     echo "A reboot is required in order to proceed with the install." >&2
     echo "Please reboot and re-run this script to finish the install." >&2
+    askForReboot
     exit 1
 fi
 
@@ -119,3 +135,4 @@ systemctl enable --now xrdp-sesman
 
 echo "Install is complete."
 echo "Reboot your machine to begin using XRDP."
+askForReboot
