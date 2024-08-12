@@ -13,6 +13,10 @@ fi
 
 # Make sure system is in good shape
 apt update
+if [ $? -ne 0 ]; then
+    echo "Error on updating"
+    exit 1
+fi
 apt upgrade -y
 apt autoremove
 
