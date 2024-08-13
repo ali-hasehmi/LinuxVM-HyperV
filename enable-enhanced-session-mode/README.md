@@ -22,6 +22,8 @@ Some of the benefits of Enhanced Session Mode include:
 
 > **IMPORTANT NOTE:** Make sure the auto-login **is disabled**.
 
+base on your distro run the script: 
+
 <details>
 <summary> Ubuntu (Gnome)</summary>
 <br>
@@ -42,3 +44,10 @@ sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-
 <summary> Manjaro (KDE) </summary>
 
 </details>
+
+then turn off your virtual machine machine, and then using PowerShell (run as Administrator), you need to enable hv_sock on you machine:
+
+```powershell
+ Set-VM -VMName Your_Virtual_Machine_Name__ -EnhancedSessionTransportType HvSocket
+ ```
+> Replace *Your_Virtual_Machine_Name__* with your actual virtual machine name.
