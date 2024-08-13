@@ -40,11 +40,6 @@ sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-
   
 </details>
 
-<details>
-<summary> Manjaro (KDE) </summary>
-
-</details>
-
 then turn off your virtual machine machine, and then using PowerShell (run as Administrator), you need to enable hv_sock on you machine:
 
 ```powershell
