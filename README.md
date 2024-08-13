@@ -4,7 +4,7 @@
 
 ## What sets Hyper-V apart from other virtualization options on Windows?
 
-Well, Hyper-V is already built into Windows, so you need no other software to make it work. But more importantly, it's a Type 1 [hypervisor](https://en.wikipedia.org/wiki/Hypervisor), also known as a bare-metal hypervisor. This means you can run VMs directly on your hardware, which results in near-native performance.
+Well, Hyper-V is already built into Windows, so you need no other software to make it work. But more importantly, it's a Type 1 [hypervisor](https://en.wikipedia.org/wiki/Hypervisor), also known as a bare-metal hypervisor. This means you can run VMs directly on your hardware, which results **in near-native performance.**
 
 ## Table of content
 

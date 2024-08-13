@@ -22,27 +22,28 @@ Some of the benefits of Enhanced Session Mode include:
 
 > **IMPORTANT NOTE:** Make sure the auto-login **is disabled**.
 
-base on your distro run the script: 
+1. base on your distro run the script: 
+    <br>
+    <details>
+    <summary> Ubuntu (Gnome)</summary>
+    <br>
+    <blockquote><b>NOTE:</b> Make sure that you have <b>curl</b> installed.</blockquote>
+    <h3> 24.04 </h3>
+    <pre><code>
+    sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install24_04.sh)" 
+    </pre></code> 
 
-<details>
-<summary> Ubuntu (Gnome)</summary>
-<br>
-<blockquote><b>NOTE:</b> Make sure that you have <b>curl</b> installed.</blockquote>
-<h3> 24.04 </h3>
-<pre><code>
-sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install24_04.sh)" 
-</pre></code> 
-
-<h3> 22.04 </h3>
-<pre><code>
-sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install22_04.sh)" 
-</pre></code> 
+    <h3> 22.04 </h3>
+    <pre><code>
+    sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install22_04.sh)" 
+    </pre></code> 
   
-</details>
+    </details>
 
-then turn off your virtual machine machine, and then using PowerShell (run as Administrator), you need to enable hv_sock on you machine:
+    <br>
+2. then turn off your virtual machine machine, and then using PowerShell (run as Administrator), you need to enable hv_sock on you machine:
 
-```powershell
- Set-VM -VMName Your_Virtual_Machine_Name__ -EnhancedSessionTransportType HvSocket
- ```
-> Replace *Your_Virtual_Machine_Name__* with your actual virtual machine name.
+    ```powershell
+    Set-VM -VMName Your_Virtual_Machine_Name__ -EnhancedSessionTransportType HvSocket
+     ```
+    > Replace *Your_Virtual_Machine_Name__* with your actual virtual machine name.
