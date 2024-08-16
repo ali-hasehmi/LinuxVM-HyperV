@@ -20,9 +20,13 @@ Some of the benefits of Enhanced Session Mode include:
 
 ## How to make it work in GNU/Linux?
 
-> **IMPORTANT NOTE:** Make sure the auto-login **is disabled**.
 
-1. base on your distro run the script: 
+1. base on your distro run the script:
+
+    > **IMPORTANT NOTE:** Make sure the auto-login **is disabled**.
+
+    > If script executes successfully, Enhanced Session Mode and Hyper-V Integrated Services will be enabled in your virtual machine.
+
     <br>
     <details>
     <summary> Ubuntu (Gnome)</summary>
@@ -41,6 +45,7 @@ Some of the benefits of Enhanced Session Mode include:
     </details>
 
     <br>
+
 2. then turn off your virtual machine machine, and then using PowerShell (run as Administrator), you need to enable hv_sock on you machine:
 
     ```powershell

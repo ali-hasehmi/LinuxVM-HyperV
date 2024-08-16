@@ -14,4 +14,3 @@ Well, Hyper-V is already built into Windows, so you need no other software to ma
 
 * [Enable Enhanced Session Mode](./enable-enhanced-session-mode/README.md)
 
-* Enable Integration Services

@@ -161,9 +161,9 @@ systemctl enable --now xrdp
 systemctl enable --now xrdp-sesman
 
 # Enable Services related to Hyper-V integration services
-systemctl enable --now hv-fcopy-daemon.service # Hyper-V File Copy Protocol Daemon
-systemctl enable --now hv-kvp-daemon.service   # Hyper-V KVP Protocol Daemon
-systemctl enable --now hv-vss-daemon.service   # Hyper-V VSS Protocol Daemon
+systemctl enable hv-fcopy-daemon.service # Hyper-V File Copy Protocol Daemon
+systemctl enable hv-kvp-daemon.service   # Hyper-V KVP Protocol Daemon
+systemctl enable hv-vss-daemon.service   # Hyper-V VSS Protocol Daemon
 
 echo "Install is complete."
 echo "Reboot your machine to begin using XRDP."
