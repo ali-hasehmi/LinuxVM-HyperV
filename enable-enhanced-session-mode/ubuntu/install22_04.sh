@@ -22,7 +22,7 @@ function buildPulseAudioXRDP() {
     # Dependencies
     DEPEND="build-essential dpkg-dev libpulse-dev git autoconf libtool"
     # Install Dependecies
-    apt install ${DEPEND}
+    apt install -y ${DEPEND}
     REPO_URL="https://github.com/neutrinolabs/pulseaudio-module-xrdp.git"
     REPO_DIR="pulseaudio-module-xrdp"
     # Change Directory to tmp
