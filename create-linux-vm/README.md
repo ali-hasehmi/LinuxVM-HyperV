@@ -53,7 +53,7 @@
 
 ![assign-memory](./images/VirtWiz04.PNG)
 
-> **NOTE:** If you want to have a virtual machine with GUI(*e.g. Desktop Environment*) allocate at least **4096MB** of RAM but if You are planning on setting up  linux as server **1024MB** or **2048MB** would be sufficient.
+> **NOTE:** If You want to have a virtual machine with GUI(*e.g. Desktop Environment*) allocate at least **2048** of RAM but if You are planning on setting up  linux as server **1024MB** would be sufficient.
 
 ### 5. Configure Networking
 
