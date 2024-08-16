@@ -25,7 +25,7 @@ Some of the benefits of Enhanced Session Mode include:
 
     > **IMPORTANT NOTE:** Make sure the auto-login **is disabled**.
 
-    > If script executes successfully, Enhanced Session Mode and Hyper-V Integrated Services will be enabled in your virtual machine.
+    > If the script executes successfully, Enhanced Session Mode and Hyper-V Integrated Services will be enabled on your virtual machine.
 
     <br>
     <details>
