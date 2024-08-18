@@ -17,18 +17,18 @@ Hyper-V is a **Type 1** [hypervisor](https://en.wikipedia.org/wiki/Hypervisor), 
 * [Enable Enhanced Session Mode](./enable-enhanced-session-mode/README.md)
 
 
-## Resources
+### Resources
 
-### Documentation
+#### Documentation
 - [Hyper-V (ArchWiki)](https://wiki.archlinux.org/title/Hyper-V#Virtual-machine-creation)
 - [xRDP](https://github.com/neutrinolabs/xrdp/wiki)
 - [xRDP (ArchWiki)](https://wiki.archlinux.org/title/Xrdp)
 - [XorgxRDP](https://github.com/neutrinolabs/xorgxrdp/wiki)
-### Tutorials
+#### Tutorials
 - [xRDP Sound Redirection on Ubuntu or Debian](https://c-nergy.be/blog/?p=17734) 
 - [ArchVM in Hyper-v](https://github.com/k247tEK/archVM-Hyper-V)
 
-### Other
+#### Other
 - [linux-vm-tools (Hinara)](https://github.com/Hinara/linux-vm-tools) 
 - [install xRDP in Mint 21.2](https://gist.github.com/ParkWardRR/2ab9b5d41bbaceca8471d591755a1898)
 - [build XorgxRDP-glamor](https://gist.github.com/rcarmo/b4ce5a130e5b8de4e8d1db6b7965eedc)
