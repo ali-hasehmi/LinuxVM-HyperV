@@ -35,14 +35,12 @@ Some of the benefits of Enhanced Session Mode include:
       <h3> 24.04 </h3>
       <pre><code>
       sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install24_04.sh)" 
-      </pre>
-      </code>
+      </pre></code>
 
       <h3> 22.04 </h3>
       <pre><code>
       sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install22_04.sh)" 
-      </pre>
-      </code> 
+      </pre></code> 
       </details>
       <details>
       <summary>Arch/Manjaro</summary>
@@ -50,8 +48,8 @@ Some of the benefits of Enhanced Session Mode include:
       <blakckquote><b>NOTE:</b> I've tested the script on Manjaro 24.0.3 with KDE-Plasma Desktop, It should be find with Arch and other Arch base distros. If You had problem with starting your DE/WM, try to configure ~/.xrdpinitrc base on your DE/WM.
     <pre><code>
     bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/manjaro/install.sh)" 
-    </pre>
-    </code>
+    </pre></code>
+    <br>
       </details>
 
       <br>
