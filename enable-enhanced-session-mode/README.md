@@ -52,3 +52,15 @@ Some of the benefits of Enhanced Session Mode include:
     Set-VM -VMName Your_Virtual_Machine_Name__ -EnhancedSessionTransportType HvSocket
      ```
     > Replace *Your_Virtual_Machine_Name__* with your actual virtual machine name.
+
+3. If anything went well, You'd see something like this when You start the VM:
+
+    ![connect to](./images/rdp-connect.png)
+    
+    You can change screen size, redirecting audio and microphone, accessing devices...
+
+4. After that You would see xRDP login page:
+
+    ![xrdp-login](./images/xrdp-login.png)
+
+5. Enter Your username and password and *hopefully* you would see your desktop.
