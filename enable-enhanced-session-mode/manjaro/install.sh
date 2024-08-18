@@ -3,7 +3,7 @@
 # Function to handle reboot
 function askForReboot() {
 
-    read -p "Reboot now? [Y,n] " -n 1 -r
+    read -p "[?] Reboot now? [Y,n] " -n 1 -r
 
     echo # (optional) move to a new line
 
@@ -25,13 +25,13 @@ function checkService() {
 
 function installFromAUR() {
     if [ -z $1 ]; then
-        echo "installFromAUR: need to provide Repository URL."
+        echo "[!] installFromAUR: need to provide Repository URL."
         exit 1
     fi
     REPO_URL=$1
 
     if [ -z $2 ]; then
-        echo "installFromAUR: need to provide Repository Directory."
+        echo "[!] installFromAUR: need to provide Repository Directory."
         exit 1
     fi
     REPO_DIR=$2
@@ -46,7 +46,7 @@ function installFromAUR() {
         # Change to Project Directory
         cd ${REPO_DIR}
     fi
-    echo "# Installing ${REPO_DIR}..."
+    echo "[+] Installing ${REPO_DIR}..."
     makepkg -si
 }
 
@@ -55,7 +55,7 @@ function installXorgXrdp() {
     default=2
     while true; do
         # Prompt user with options, providing a default value
-        echo "Which package would you like to install?"
+        echo "[?] Which package would you like to install?"
         echo -n "[ 1. xorgxrdp, 2. xorgxrdp-glamor 3. xorgxrdp-nvidia ] (default: $default): "
         read -n 1 -r # The user input will be stored in the REPLY variable
         echo
@@ -94,7 +94,7 @@ function installAudioModule() {
 
     while true; do
         # Prompt user with options, providing a default value
-        echo "Which package would you like to install?"
+        echo "[?] Which package would you like to install?"
         echo -n "[1. pulseaudio-module-xrdp, 2. pipewire-module-xrdp] (default: $default): "
         read -n 1 -r # The user input will be stored in the REPLY variable
         echo
@@ -117,12 +117,42 @@ function installAudioModule() {
     done
     installFromAUR $URL $DIR
 }
+
+function handleXrdpInitRc() {
+    # Define file paths
+    XRDPINITRC="$HOME/.xrdpinitrc"
+    XINITRC="$HOME/.xinitrc"
+    DEFAULT_XINITRC="/etc/X11/xinit/xinitrc"
+
+    # Check if ~/.xrdpinitrc exists
+    if [ -f "$XRDPINITRC" ]; then
+        echo "[-] ${XRDPINITRC} already existed"
+        return 0
+    fi
+    # Check if ~/xinitrc exists
+    if [ -f "$XINITRC" ]; then
+        # Copy ~/xinitrc to ~/.xrdpinitrc
+        cp "$XINITRC" "$XRDPINITRC"
+        echo "[+] ${XRDPINITRC} copied from ${XINITRC}"
+        return 0
+    fi
+    # Check if /etc/X11/xinit/xinitrc exists
+    if [ -f "$DEFAULT_XINITRC" ]; then
+        # Copy /etc/X11/xinit/xinitrc to ~/.xrdpinitrc
+        cp "$DEFAULT_XINITRC" "$XRDPINITRC"
+        echo "[+] ${XRDPINITRC} copied from ${DEFAULT_XINITRC}"
+        return 0
+    fi
+    # If none of the files exist
+    echo "[!] None of the files ~/.xrdpinitrc, ~/xinitrc, or /etc/X11/xinit/xinitrc exist. Operation failed."
+    return 1
+}
 # exit script on error
 set -e
 
 # Check if script run as root
 if [ "$(id -u)" -eq 0 ]; then
-    echo 'This script must be run as non-root user' >&2
+    echo '[!] This script must be run as non-root user' >&2
     exit 1
 fi
 
@@ -184,6 +214,15 @@ ResultAny=no
 ResultInactive=no
 ResultActive=yes
 EOF
+
+# function call to create ~/.xrdpinitrc (if not already existed)
+handleXrdpInitRc
+
+# Function to remove '--exit-with-session' from a ~/.xrdpinitrc
+sed -i 's/--exit-with-session//g' "${HOME}/.xrdpinitrc"
+
+# configure startwm.sh to run the ~/.xrdpinitrc instead of ~/.xinitrc
+sudo sed -i "s/\/.xinitrc/\/.xrdpinitrc/g" "/etc/xrdp/startwm.sh"
 
 # reconfigure the service
 sudo systemctl daemon-reload
