@@ -47,7 +47,40 @@ function installFromAUR() {
         cd ${REPO_DIR}
     fi
     echo "# Installing ${REPO_DIR}..."
-    makepkg -si 
+    makepkg -si
+}
+
+function installXorgXrdp() {
+
+    default=2
+    while true; do
+        # Prompt user with options, providing a default value
+        echo "Which package would you like to install?"
+        echo -n "[ 1. xorgxrdp, 2. xorgxrdp-glamor 3. xorgxrdp-nvidia ] (default: $default): "
+        read -n 1 -r # The user input will be stored in the REPLY variable
+        echo
+
+        # Set the default if the user presses Enter without input
+        REPLY=${REPLY:-$default}
+
+        # Determine the package to install based on user input or default
+        if [[ "$REPLY" == "1" ]]; then
+            URL="https://aur.archlinux.org/xorgxrdp.git"
+            DIR="xorgxrdp"
+            break
+        elif [[ "$REPLY" == "2" ]]; then
+            URL="https://aur.archlinux.org/xorgxrdp-glamor.git"
+            DIR="xorgxrdp-glamor"
+            break
+        elif [[ "$REPLY" == "3" ]]; then
+            URL="https://aur.archlinux.org/xorgxrdp-nvidia.git"
+            DIR="xorgxrdp-nvidia"
+            break
+        else
+            echo "Invalid choice..."
+        fi
+    done
+    installFromAUR ${URL} ${DIR}
 }
 
 function installAudioModule() {
@@ -82,7 +115,7 @@ function installAudioModule() {
             echo "Invalid choice..."
         fi
     done
-    installFromAUR $URL $DIR 
+    installFromAUR $URL $DIR
 }
 # exit script on error
 set -e
@@ -103,12 +136,10 @@ sudo pacman -S git base-devel linux-tools cloud-utils --noconfirm --needed
 installFromAUR 'https://aur.archlinux.org/xrdp.git' 'xrdp'
 
 # install xorgxrdp
-# TO DO: add options for xorgxrdp-glamor and xorgxrdp-nvidia
-installFromAUR 'https://aur.archlinux.org/xorgxrdp.git' 'xorgxrdp'
+installXorgXrdp
 
 # install audio module to redirect audio (either pulseaudio or pipewire - choose base on running service)
 installAudioModule
-
 
 # stoping services
 sudo systemctl stop xrdp
