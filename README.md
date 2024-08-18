@@ -1,10 +1,7 @@
 # What is Hyper-V
 
-[Hyper-V](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview) is a virtualization platform developed by Microsoft. It allows you to create and manage virtual machines (VMs) on a physical host machine. With Hyper-V, you can run multiple operating systems on a single physical server, each with its own dedicated resources and isolated from the others.
-
-## How does Hyper-V differ from other virtualization platforms on Windows?
-
-Hyper-V is a **Type 1** [hypervisor](https://en.wikipedia.org/wiki/Hypervisor), also known as a bare-metal hypervisor, which runs directly on the hardware, offering **near-native performance** and making it more efficient than Type 2 hypervisors like *VirtualBox* and *VMware Workstation*, which operate on top of an existing operating system. One of its key advantages is that it’s already built into Windows, requiring **no additional software** to set up. Its deep integration with the OS enables advanced features such as **live migration, dynamic memory management, and robust security**, making it an ideal choice for enterprise environments and performance-critical tasks.
+[Hyper-V](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview) is a native [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) developed by Microsoft that allows you to create and manage virtual machines (VMs) on Windows. As a **Type 1 (bare-metal)** hypervisor, it runs directly on the host's hardware, providing **near-native performance** by efficiently managing system resources. Hyper-V is integrated into Windows, eliminating the need for additional software installations, and supports a wide range of operating systems, including various versions of *Windows, Linux, and FreeBSD*.  
+Hyper-V offers advanced features such as live migration, which allows you to move running VMs between hosts without downtime, and dynamic memory allocation, which optimizes memory usage by adjusting the allocated memory to VMs as needed. It also provides robust security with features like shielded VMs to protect against unauthorized access, and nested virtualization, enabling the use of virtual machines within VMs. Hyper-V is ideal for both enterprise environments and development tasks, supporting scenarios from simple desktop virtualization to complex cloud and data center deployments.
 
 
 ## Table of content
