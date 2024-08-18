@@ -28,8 +28,8 @@ Some of the benefits of Enhanced Session Mode include:
    > If the script executes successfully, Enhanced Session Mode and Hyper-V Integrated Services will be enabled on your virtual machine.
 
       <br>
-      <details>
-      <summary> Ubuntu (Gnome)</summary>
+    <details>
+    <summary> Ubuntu (Gnome)</summary>
       <br>
       <blockquote><b>NOTE:</b> Make sure that you have <b>curl</b> installed.</blockquote>
       <h3> 24.04 </h3>
@@ -41,16 +41,16 @@ Some of the benefits of Enhanced Session Mode include:
       <pre><code>
       sudo bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/ubuntu/install22_04.sh)" 
       </pre></code> 
-      </details>
-      <details>
-      <summary>Arch/Manjaro</summary>
+    </details>
+    <details>
+    <summary>Arch/Manjaro</summary>
       <br>
       <blockquote><b>NOTE:</b> I've tested the script on <i>Manjaro 24.0.3</i> with KDE-Plasma Desktop, It should be fine with Arch and other Arch base distros. If You had problem with starting your DE/WM, try to configure ~/.xrdpinitrc base on your DE/WM.</blockquote>
-    <br>
-     <pre><code>
-    bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/manjaro/install.sh)"</pre></code>
-    <br>
-      </details>
+      <br>
+      <pre><code>
+      bash -c "$(curl -sSL https://raw.githubusercontent.com/ali-hasehmi/LinuxVM-HyperV/main/enable-enhanced-session-mode/manjaro/install.sh)"</pre></code>
+      <br>
+    </details>
 
       <br>
       <br>
