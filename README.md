@@ -10,11 +10,11 @@ Hyper-V is a **Type 1** [hypervisor](https://en.wikipedia.org/wiki/Hypervisor), 
 ## Table of content
 
 
-* [Enable Hyper-v](./enable-hyper-v/README.md)
+* **[Enable Hyper-v](./enable-hyper-v/README.md)**
 
-* [Create GNU/Linux virtual machine](./create-linux-vm/README.md)
+* **[Create GNU/Linux virtual machine](./create-linux-vm/README.md)**
 
-* [Enable Enhanced Session Mode](./enable-enhanced-session-mode/README.md)
+* **[Enable Enhanced Session Mode](./enable-enhanced-session-mode/README.md)**
 
 
 ### Resources
