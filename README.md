@@ -17,7 +17,7 @@ Hyper-V is a **Type 1** [hypervisor](https://en.wikipedia.org/wiki/Hypervisor), 
 * **[Enable Enhanced Session Mode](./enable-enhanced-session-mode/README.md)**
 
 
-### Resources
+## Resources
 
 #### Documentation
 - [Hyper-V (ArchWiki)](https://wiki.archlinux.org/title/Hyper-V#Virtual-machine-creation)
