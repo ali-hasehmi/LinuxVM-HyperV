@@ -46,6 +46,7 @@ Some of the benefits of Enhanced Session Mode include:
 
     <br>
     <br>
+    
 2. then turn off your virtual machine machine, and then using PowerShell (run as Administrator), you need to enable hv_sock on you machine:
 
     ```powershell
