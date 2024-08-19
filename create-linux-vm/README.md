@@ -37,7 +37,7 @@
 
 > **Generation 2** virtual machines, on the other hand, use UEFI (Unified Extensible Firmware Interface) firmware, which is a newer and more advanced firmware that provides better security features and supports newer hardware devices.
 
-> I use Gen2 which give us more features but You can find more information [here](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v).
+> I use Gen2 which gives us more features but You can find more information [here](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v).
 * select Geneation 2.
 
 * click **Next**.
