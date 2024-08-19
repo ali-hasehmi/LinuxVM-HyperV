@@ -124,3 +124,5 @@
 * Right click on Your virtual machine and click on **"Connect..."**
 
 * Hopefully You will be able to boot from iso file provided before and begin the installation.
+
+> **NOTE:** Don't forget to [enable Enhanced Session Mode](../enable-enhanced-session-mode/README.md) after installation if you want to use the GUI. Without it, features like audio redirection, display resizing, rendering acceleration, shared clipboard, and more will be disabled.
