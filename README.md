@@ -14,7 +14,7 @@ Hyper-V offers advanced features such as live migration, which allows you to mov
 * **[Enable Enhanced Session Mode](./enable-enhanced-session-mode/README.md)**
 
 
-# Why Bother to Write a Repository About Linux in Hyper-V?
+## Why Bother to Write a Repository About Linux in Hyper-V?
 Writing a repository about running Linux in Hyper-V might seem like an unusual or even unnecessary endeavor at first glance, but:  
 1. One of the most significant reasons for creating a comprehensive repository is Microsoft's decision to end support for the Linux Integration Services (LIS) package for Hyper-V. This shift is largely due to Microsoft's strategic focus on promoting the Windows Subsystem for Linux (WSL), so we need a little of adaptation.
 
@@ -22,7 +22,7 @@ Writing a repository about running Linux in Hyper-V might seem like an unusual o
 
 3. Despite the challenges, Hyper-V remains a powerful and viable option for running Linux VMs, especially for those who already have access to Windows. Hyper-V is a robust virtualization platform, offering high performance, advanced features, and deep integration with Windows environments—all at no additional cost if you have an active Windows license. 
 
-# Resources
+## Resources
 
 #### Documentation
 - [Hyper-V (ArchWiki)](https://wiki.archlinux.org/title/Hyper-V#Virtual-machine-creation)
