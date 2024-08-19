@@ -196,12 +196,12 @@ sudo sed -i -e 's/FuseMountName=thinclient_drives/FuseMountName=shared-drives/g'
 
 # Blacklist the vmw module
 if [ ! -e /etc/modprobe.d/blacklist-vmw_vsock_vmci_transport.conf ]; then
-    sudo tee /etc/modprobe.d/blacklist-vmw_vsock_vmci_transport.conf < "blacklist vmw_vsock_vmci_transport" 
+    echo "blacklist vmw_vsock_vmci_transport" | sudo tee /etc/modprobe.d/blacklist-vmw_vsock_vmci_transport.conf >/dev/null
 fi
 
 #Ensure hv_sock gets loaded
 if [ ! -e /etc/modules-load.d/hv_sock.conf ]; then
-    sudo tee /etc/modules-load.d/hv_sock.conf < "hv_sock" 
+    echo "hv_sock" | sudo tee /etc/modules-load.d/hv_sock.conf >/dev/null
 fi
 
 # Configure the policy xrdp session
