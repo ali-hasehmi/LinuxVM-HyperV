@@ -58,12 +58,12 @@ Some of the benefits of Enhanced Session Mode include:
 2. then turn off your virtual machine, and then using PowerShell (run as Administrator), you need to enable hv_sock on your machine:
 
    ```powershell
-   Set-VM -VMName Your_Virtual_Machine_Name__ -EnhancedSessionTransportType HvSocket
+   Set-VM -VMName _Your_Virtual_Machine_Name__ -EnhancedSessionTransportType HvSocket
    ```
 
    > Replace \_Your_Virtual_Machine_Name\_\_\_ with your actual virtual machine name.
 
-3. If anything went well, You'd see something like this when You start the VM:
+3. If everything went well, You'd see something like this when You start the VM:
 
    ![connect to](./images/rdp-connect.png)
 
